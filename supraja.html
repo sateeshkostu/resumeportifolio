@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Login Form</h1>
+        <form id="loginForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" /><br />
+    
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" /><br />
+    
+          <button type="submit">Login</button>
+        </form>
+    
+        <h1>Signup Form</h1>
+        <form id="signupForm">
+          <label for="newUsername">Username:</label>
+          <input type="text" id="newUsername" name="newUsername" /><br />
+    
+          <label for="newPassword">Password:</label>
+          <input type="password" id="newPassword" name="newPassword" /><br />
+    
+          <button type="submit">Signup</button>
+        </form>
+        <script>
+            // Get the login form and add an event listener for the form submission
+const loginForm = document.querySelector('#loginForm');
+loginForm.addEventListener('submit', login);
+
+// Get the signup form and add an event listener for the form submission
+const signupForm = document.querySelector('#signupForm');
+signupForm.addEventListener('submit', signup);
+
+// Define the login function
+function login(event) {
+  event.preventDefault(); // prevent the default form submission behavior
+  
+  // Get the username and password values from the login form
+  const username = document.querySelector('#username').value;
+  const password = document.querySelector('#password').value;
+
+  // TODO: perform authentication logic here
+  console.log(`Logging in with username: ${username} and password: ${password}`);
+}
+
+// Define the signup function
+function signup(event) {
+  event.preventDefault(); // prevent the default form submission behavior
+  
+  // Get the new username and password values from the signup form
+  const newUsername = document.querySelector('#newUsername').value;
+  const newPassword = document.querySelector('#newPassword').value;
+
+  // TODO: perform signup logic here
+  console.log(`Signing up with username: ${newUsername} and password: ${newPassword}`);
+}
+        </script>
+</body>
+</html>
